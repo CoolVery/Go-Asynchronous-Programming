@@ -4,7 +4,7 @@ import (
 	"time"
 )
 
-// Задача 6. Таймаут через select
+// Задача 5. Таймаут через select
 // Напиши функцию WaitFor(ch <-chan int, d time.Duration) (int, bool), которая ждёт значение из канала не дольше d. Возвращает (value, true) или (0, false) при таймауте.
 
 // Тренирует: select + time.After.

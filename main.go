@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"sync"
-	"time"
+	_ "sync"
+	_ "time"
 )
 
 func main() {
@@ -52,4 +52,22 @@ func main() {
     // ch2 := make(chan int)
     // v, ok = WaitFor(ch2, 100*time.Millisecond)
     // fmt.Println("случай 2:", v, ok) // 0 false
+
+	//SixTask
+	// 1. Есть значение
+    // ch1 := make(chan int, 1)
+    // ch1 <- 42
+    // v, ok := TryReceive(ch1)
+    // fmt.Println("случай 1 (есть значение):", v, ok) // 42 true
+
+    // // 2. Пусто
+    // ch2 := make(chan int)
+    // v, ok = TryReceive(ch2)
+    // fmt.Println("случай 2 (пусто):", v, ok) // 0 false
+
+    // // 3. Закрыт
+    // ch3 := make(chan int)
+    // close(ch3)
+    // v, ok = TryReceive(ch3)
+    // fmt.Println("случай 3 (закрыт):", v, ok) // 0 false
 }
