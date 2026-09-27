@@ -11,7 +11,7 @@ import (
 // Тренирует: базовую отправку/получение, небуферизованный канал.
 // Подсказка: make(chan int) + одна горутина-отправитель и main-получатель.
 
-func pingPong() {
+func PingPong() {
 	//Создаем waitGroup
 	var wg sync.WaitGroup
 	//Создаем небуф. канал
