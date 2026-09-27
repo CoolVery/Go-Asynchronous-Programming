@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
 func main() {
@@ -41,4 +42,14 @@ func main() {
 	// 	fmt.Println(id)
 	// }
 	
+	//FiftTask
+	// ch1 := make(chan int, 1)
+    // ch1 <- 42
+    // v, ok := WaitFor(ch1, 1*time.Second)
+    // fmt.Println("случай 1:", v, ok) // 42 true
+
+    // // Случай 2: таймаут — никто не пишет
+    // ch2 := make(chan int)
+    // v, ok = WaitFor(ch2, 100*time.Millisecond)
+    // fmt.Println("случай 2:", v, ok) // 0 false
 }
